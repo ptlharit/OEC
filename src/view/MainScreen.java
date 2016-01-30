@@ -24,13 +24,13 @@ public class MainScreen {
 
 	public MainScreen() {
 		frame = new JFrame();
-        frame.setTitle("Ontario Engineering Competition | 2016 | Programming");
+        frame.setTitle("K\u00dcDO - The Interactive Programming Story Book");
         frame.setSize(800, 600);
         frame.setLocationRelativeTo(null);
         
         window = new JPanel();
         
-        title = new JLabel("Welcome to KÜDO");
+        title = new JLabel("Welcome to K\u00dcDO! ");
         title.setBounds(0, 0, 800, 106);
         Font titleFont = title.getFont();
         String titleText = title.getText();
