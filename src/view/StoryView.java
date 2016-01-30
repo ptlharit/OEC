@@ -136,7 +136,6 @@ public class StoryView extends JFrame {
 			return;
 		}
 
-		slideNumber++;
 		update();
 	}
 	
@@ -155,9 +154,14 @@ public class StoryView extends JFrame {
 			return;
 		}
 		
-		slideNumber++;
+
 		
-		boolean correctAns = Controller.checkAns(console.getText(), module, slideNumber);
+		update();
+
+		
+		boolean correctAns = Controller.CompareAnswers(module, console.getText(), slideNumber);
+		
+		slideNumber++;
 		Random rand = new Random();
 		int randInt = rand.nextInt(9);
 		String congratulationMSG = "";
