@@ -30,13 +30,16 @@ public class TopicView {
 		title = new JLabel(createImageIcon ("topics.png"));
 
 		Variable_button = new JButton(createImageIcon ("variables.png"));
-		Variable_button.addActionListener(e -> { nextWindow(); });
+		Variable_button.addActionListener(e -> { openStory(1); });
 
 		Condition_button = new JButton(createImageIcon ("conditions.png"));
+		Condition_button.addActionListener(e ->{ openStory(2); });
 
 		Loops_button = new JButton(createImageIcon ("loops.png"));
+		Loops_button.addActionListener(e -> { openStory(3);} );
 
 		Sub_button = new JButton(createImageIcon ("subroutines.png"));
+		Sub_button.addActionListener(e -> { openStory(4);} );
 
 		window.add(title);
 		window.add(Variable_button);
@@ -51,10 +54,11 @@ public class TopicView {
 		frame.setVisible(true);
 	}
 
-	private void nextWindow() {
+	private void openStory(int module) {
 		frame.dispose();
 		@SuppressWarnings("unused")
-		GameView gv = new GameView();
+		StoryView sv = new StoryView(module);
+		
 	}
 	
 	protected static ImageIcon createImageIcon (String path)
