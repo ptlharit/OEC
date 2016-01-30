@@ -19,10 +19,6 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
 import controller.Controller;
-import model.Conditional;
-import model.Loop;
-import model.Subroutine;
-import model.Variable;
 
 public class StoryView extends JFrame {
 
