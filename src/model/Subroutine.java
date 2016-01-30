@@ -111,4 +111,8 @@ public class Subroutine {
 	public String getHint(int module){
 		return hint[module - 1];
 	}
+	
+	public int getMaxSlideNumber() {
+		return story.length;
+	}
 }

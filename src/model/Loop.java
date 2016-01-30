@@ -20,4 +20,8 @@ public class Loop
 	{
 		return answer[module - 1];
 	}
+	
+	public int getMaxSlideNumber() {
+		return story.length;
+	}
 }

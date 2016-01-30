@@ -81,4 +81,8 @@ public class Conditional {
 	public String getQuestion(int module) {
 		return question[module - 1];
 	}
+	
+	public int getMaxSlideNumber() {
+		return story.length;
+	}
 }

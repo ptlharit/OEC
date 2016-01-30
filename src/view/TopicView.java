@@ -1,6 +1,7 @@
 package view;
 
 import java.awt.Color;
+import java.awt.EventQueue;
 import java.awt.GridLayout;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -26,7 +27,6 @@ public class TopicView {
 
 		window = new JPanel(new GridLayout(5, 1));
 
-		
 		title = new JLabel(createImageIcon ("topics.png"));
 
 		Variable_button = new JButton(createImageIcon ("variables.png"));
@@ -56,9 +56,16 @@ public class TopicView {
 
 	private void openStory(int module) {
 		frame.dispose();
-		@SuppressWarnings("unused")
-		StoryView sv = new StoryView(module);
-		
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					StoryView frame = new StoryView(module);
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
 	}
 	
 	protected static ImageIcon createImageIcon (String path)
@@ -74,9 +81,5 @@ public class TopicView {
             return null; //returns nothing
         } //Ends else loop
     } //createImageIcon method ends
-
-	public static void main(String args[]) {
-		TopicView tv = new TopicView();
-	}
 
 }
