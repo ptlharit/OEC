@@ -44,12 +44,8 @@ public class StoryView extends JFrame {
 	private int slideNumber = 1;
 	private String slideLabelText = "Slide";
 	
-<<<<<<< HEAD
 	private String[] values = { titleText, storyText, picturePath, questionText, slideLabelText };
-=======
-	private JTextField console;
->>>>>>> 65e607b1b0834c4881e8d26fdfa7b83fffd8075b
-	
+
 	public StoryView(int m) {
 		module = m;
 		
@@ -132,7 +128,7 @@ public class StoryView extends JFrame {
 	}
 	
 	private void next() {
-<<<<<<< HEAD
+
 		values = Controller.next(module, slideNumber);
 		
 		if (values.length == 1) {
@@ -148,7 +144,7 @@ public class StoryView extends JFrame {
 		
 		slideNumber++;
 		update();
-=======
+
 		boolean correctAns = Controller.checkAns(console.getText(), module, slideNumber);
 		Random rand = new Random();
 		int randInt = rand.nextInt(9);
@@ -175,7 +171,6 @@ public class StoryView extends JFrame {
 		}else {
 			JOptionPane.showMessageDialog(this, "Oops, try again. \nRemember to check the hint.", "Sorry, that's not it.", JOptionPane.ERROR_MESSAGE);
 		}
->>>>>>> 65e607b1b0834c4881e8d26fdfa7b83fffd8075b
 	}
 	
 	private void update() {
