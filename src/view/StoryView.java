@@ -144,7 +144,7 @@ public class StoryView extends JFrame {
 		
 		slideNumber++;
 		update();
-
+		
 		boolean correctAns = Controller.checkAns(console.getText(), module, slideNumber);
 		Random rand = new Random();
 		int randInt = rand.nextInt(9);
