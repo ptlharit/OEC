@@ -25,7 +25,7 @@ public class StoryView extends JFrame {
 	private JPanel contentPane;
 	private JLabel moduleLabel;
 	private JTextArea story;
-	private JTextPane picture;
+	private JLabel picture;
 	private JTextArea question;
 	private JTextField console;
 	private JLabel slideLabel;
@@ -69,8 +69,8 @@ public class StoryView extends JFrame {
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
 		
-		picture = new JTextPane();
-		picture.insertIcon ( new ImageIcon(picturePath));
+		picture = new JLabel();
+		picture.setIcon (new ImageIcon(picturePath));
 		picture.setBounds(12, 12, 287, 304);
 		panel_1.add(picture);
 		
@@ -190,7 +190,7 @@ public class StoryView extends JFrame {
 	private void update() {
 		moduleLabel.setText(values[0]);
 		story.setText(values[1]);
-		picture.insertIcon(new ImageIcon(values[2]));
+		picture.setIcon(new ImageIcon(values[2]));
 		question.setText(values[3]);
 		slideLabel.setText(values[4]);
 	}
