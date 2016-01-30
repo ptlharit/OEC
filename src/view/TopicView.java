@@ -29,14 +29,14 @@ public class TopicView {
 		
 		title = new JLabel(createImageIcon ("topics.png"));
 
-		Variable_button = new JButton("Variables");
+		Variable_button = new JButton(createImageIcon ("variables.png"));
 		Variable_button.addActionListener(e -> { nextWindow(); });
 
-		Condition_button = new JButton("Conditions");
+		Condition_button = new JButton(createImageIcon ("conditions.png"));
 
-		Loops_button = new JButton("Loops");
+		Loops_button = new JButton(createImageIcon ("loops.png"));
 
-		Sub_button = new JButton("Subroutines");
+		Sub_button = new JButton(createImageIcon ("subroutines.png"));
 
 		window.add(title);
 		window.add(Variable_button);
