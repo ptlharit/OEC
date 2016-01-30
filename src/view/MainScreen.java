@@ -30,7 +30,7 @@ public class MainScreen {
         
         window = new JPanel();
         
-        title = new JLabel("Welcome to K\u00dcDO! ");
+        title = new JLabel("Welcome to K\u00dcDO!");
         title.setBounds(0, 0, 800, 106);
         Font titleFont = title.getFont();
         String titleText = title.getText();

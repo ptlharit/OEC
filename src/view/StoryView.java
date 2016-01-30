@@ -145,7 +145,6 @@ public class StoryView extends JFrame {
 		values = Controller.next(module, slideNumber);
 		
 		if (values.length == 1) {
-			// YOURE DONE POP UP
 			JOptionPane.showMessageDialog(this, "You Finished a chapter!", "YAY!", JOptionPane.INFORMATION_MESSAGE);
 			this.dispose();
 			TopicView tv = new TopicView();
