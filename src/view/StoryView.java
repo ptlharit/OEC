@@ -48,7 +48,6 @@ public class StoryView extends JFrame {
 
 	public StoryView(int m) {
 		module = m;
-		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 900, 600);
 		contentPane = new JPanel();
@@ -114,6 +113,7 @@ public class StoryView extends JFrame {
 		slideLabel = new JLabel(slideLabelText);
 		slideLabel.setBounds(419, 38, 70, 15);
 		panel_2.add(slideLabel);
+		initialize();
 	}
 	
 	private void back() {
@@ -127,12 +127,30 @@ public class StoryView extends JFrame {
 		update();
 	}
 	
+	private void initialize(){
+		values = Controller.next(module, slideNumber);
+
+		if (values.length == 1) {
+			this.dispose();
+			TopicView tv = new TopicView();
+			return;
+		} else if (values.length == 2) {
+			this.dispose();
+			TopicView tv = new TopicView();
+			return;
+		}
+
+		slideNumber++;
+		update();
+	}
+	
 	private void next() {
 
 		values = Controller.next(module, slideNumber);
 		
 		if (values.length == 1) {
 			// YOURE DONE POP UP
+			JOptionPane.showMessageDialog(this, "You Finished a chapter!", "YAY!", JOptionPane.INFORMATION_MESSAGE);
 			this.dispose();
 			TopicView tv = new TopicView();
 			return;
