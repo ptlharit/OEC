@@ -2,9 +2,9 @@ package model;
 
 public class Loop 
 {
-	String [] story = {};
-	String [] question = {};
-	String [] answer = {};
+	String [] story = {"Nish is Eating when he is hungry.","Nish is outside and he is walking."};
+	String [] question = {"Can you make Nish Eat?\nHint - try typing While Nish is Hungry, Nish is Eating","Can you make Nish Walk?"};
+	String [] answer = {"Nish is Hungry, Nish is Eating","While Nish is Outside, Nish is Walking"};
 	
 	public String getStory(int module) 
 	{
