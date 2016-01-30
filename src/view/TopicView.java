@@ -22,7 +22,7 @@ public class TopicView {
 
 	public TopicView() {
 		frame = new JFrame();
-		frame.setTitle("Ontario Engineering Competition | 2016 | Programming");
+		frame.setTitle("OEC | 2016 | PROGRAMMING | KUDO");
 		frame.setSize(800, 600);
 
 		window = new JPanel(new GridLayout(5, 1));

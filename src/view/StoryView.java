@@ -55,7 +55,7 @@ public class StoryView extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		setTitle("K\u00dcDO - The Interactive Programming Story Book" );
+		setTitle("OEC | 2016 | PROGRAMMING | KUDO");
 		
 		JPanel panel = new JPanel();
 		panel.setBounds(12, 12, 876, 132);

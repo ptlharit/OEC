@@ -24,7 +24,7 @@ public class MainScreen {
 
 	public MainScreen() {
 		frame = new JFrame();
-        frame.setTitle("K\u00dcDO - The Interactive Programming Story Book");
+        frame.setTitle("OEC | 2016 | PROGRAMMING | KUDO");
         frame.setSize(800, 600);
         frame.setLocationRelativeTo(null);
         
