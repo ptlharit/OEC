@@ -20,6 +20,7 @@ public class Controller {
 	private static String slideLabelText = "";
 	
 	public static String[] next(int module, int slideNumber) {
+<<<<<<< HEAD
 		if (slideNumber <= 0) {
 			String[] values = { "", "" };
 			return values;
@@ -79,8 +80,15 @@ public class Controller {
 		
 		String[] values = { titleText, storyText, picturePath, questionText, slideLabelText };
 		return values;
+=======
+		String[] a = new String[1];
+		return a;
+>>>>>>> 65e607b1b0834c4881e8d26fdfa7b83fffd8075b
 	}
 	
+	public static boolean checkAns(String ans, int module, int slideNumber){
+		return false;
+	}
 	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		MainScreen ms = new MainScreen();
