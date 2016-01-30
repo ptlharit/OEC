@@ -70,7 +70,7 @@ public class StoryView extends JFrame {
 		panel_1.setLayout(null);
 		
 		picture = new JLabel();
-		//picture.setIcon (new ImageIcon(picturePath));
+		picture.setIcon (new ImageIcon(picturePath));
 		picture.setBounds(12, 12, 287, 304);
 		panel_1.add(picture);
 		

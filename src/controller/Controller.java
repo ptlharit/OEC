@@ -33,7 +33,7 @@ public class Controller {
 			}
 			titleText = "VARIABLES";
 			storyText = variable.getStory(slideNumber);
-			picturePath = "pics/" + "var" + slideNumber + ".jpg";
+			picturePath = "/pics/" + "var" + slideNumber + ".jpg";
 			questionText = variable.getQuestion(slideNumber);
 			slideLabelText = "Slide " + slideNumber + " of " + variable.getMaxSlideNumber();
 		}
@@ -46,7 +46,7 @@ public class Controller {
 			}
 			titleText = "CONDITIONALS";
 			storyText = conditional.getStory(slideNumber);
-			picturePath = "pics/" + "cdn" + slideNumber + ".jpg";
+			picturePath = "/pics/" + "cdn" + slideNumber + ".jpg";
 			questionText = conditional.getQuestion(slideNumber);
 			slideLabelText = "Slide " + slideNumber + " of " + conditional.getMaxSlideNumber();
 		}
@@ -59,7 +59,7 @@ public class Controller {
 			}
 			titleText = "LOOPS";
 			storyText = loop.getStory(slideNumber);
-			picturePath = "pics/" + "loop" + slideNumber + ".jpg";
+			picturePath = "/pics/" + "loop" + slideNumber + ".jpg";
 			questionText = loop.getQuestion(slideNumber);
 			slideLabelText = "Slide " + slideNumber + " of " + loop.getMaxSlideNumber();
 		}
@@ -72,7 +72,7 @@ public class Controller {
 			}
 			titleText = "SUBROUTINE";
 			storyText = subroutine.getStory(slideNumber);
-			picturePath = "pics/" + "sub" + slideNumber + ".jpg";
+			picturePath = "/pics/" + "sub" + slideNumber + ".jpg";
 			questionText = subroutine.getQuestion(slideNumber);
 			slideLabelText = "Slide " + slideNumber + " of " + subroutine.getMaxSlideNumber();
 		}
