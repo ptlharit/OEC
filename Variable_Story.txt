@@ -4,7 +4,7 @@ Hi, my name is Nish and I am 20 years old.
 How old is Nish? Hint - try typing: Nish is 20
 Nish is 20
 
-(Pop Up) Hooooray! You just created Nish with a VARIABLE. Variable help us make things. Like, Nish is 20 years old
+(Pop Up) Hooooray! You just created Nish with a VARIABLE. Variables help us make things.
 
 Nish just had a birthday. Now, he is 21 years old. How old is Nish now?
 Nish is 21
@@ -44,3 +44,5 @@ Whats the colour of the shirt?
 Shirt is Yellow
 Is Nish sleeping?
 Sleep is No
+
+(Pop Up) Congratulations! You have successully learned Variables.
