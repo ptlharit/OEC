@@ -19,10 +19,6 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
 import controller.Controller;
-import model.Conditional;
-import model.Loop;
-import model.Subroutine;
-import model.Variable;
 
 public class StoryView extends JFrame {
 
@@ -74,7 +70,7 @@ public class StoryView extends JFrame {
 		panel_1.setLayout(null);
 		
 		picture = new JLabel();
-		picture.setIcon (new ImageIcon(picturePath));
+		//picture.setIcon (new ImageIcon(picturePath));
 		picture.setBounds(12, 12, 287, 304);
 		panel_1.add(picture);
 		
@@ -161,7 +157,6 @@ public class StoryView extends JFrame {
 		}
 		
 		slideNumber++;
-		update();
 		
 		boolean correctAns = Controller.checkAns(console.getText(), module, slideNumber);
 		Random rand = new Random();
@@ -199,16 +194,4 @@ public class StoryView extends JFrame {
 		slideLabel.setText(values[4]);
 	}
 	
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					StoryView frame = new StoryView(1);
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 }
