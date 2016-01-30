@@ -1,19 +1,23 @@
 package model;
 
-public class Loop {
-	String [] learn = new String[5];
-	String [] answer = new String[5];
-	String [] hint = new String[5];
+public class Loop 
+{
+	String [] story = {"Nish is Eating when he is hungry.","Nish is outside and he is walking."};
+	String [] question = {"Can you make Nish Eat?\nHint - try typing While Nish is Hungry, Nish is Eating","Can you make Nish Walk?"};
+	String [] answer = {"While Nish is Hungry, Nish is Eating","While Nish is Outside, Nish is Walking"};
 	
-	public String getLearn(int module) {
-		return learn[module - 1];
+	public String getStory(int module) 
+	{
+		return story[module - 1];
 	}
-
-	public String getAnswer(int module) {
+	
+	public String getQuestion(int module) 
+	{
+		return question[module - 1];
+	}
+	
+	public String getAnswer(int module) 
+	{
 		return answer[module - 1];
-	}
-
-	public String getHint(int module) {
-		return hint[module - 1];
 	}
 }
