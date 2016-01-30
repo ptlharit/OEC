@@ -45,7 +45,7 @@ public class StoryView extends JFrame {
 	private String slideLabelText = "Slide";
 	
 	private String[] values = { titleText, storyText, picturePath, questionText, slideLabelText };
-	
+
 	public StoryView(int m) {
 		module = m;
 		
@@ -128,6 +128,7 @@ public class StoryView extends JFrame {
 	}
 	
 	private void next() {
+
 		values = Controller.next(module, slideNumber);
 		
 		if (values.length == 1) {
@@ -143,6 +144,7 @@ public class StoryView extends JFrame {
 		
 		slideNumber++;
 		update();
+		
 		boolean correctAns = Controller.checkAns(console.getText(), module, slideNumber);
 		Random rand = new Random();
 		int randInt = rand.nextInt(9);
