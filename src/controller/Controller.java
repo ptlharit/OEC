@@ -19,6 +19,11 @@ public class Controller {
 	private static String questionText = "";
 	private static String slideLabelText = "";
 	
+	static Conditional ConditionalModel = new Conditional();
+	static Loop LoopModel = new Loop();
+	static Subroutine SubroutineModel = new Subroutine();
+	static Variable VariableModel = new Variable();
+	
 	public static String[] next(int module, int slideNumber) {
 		if (slideNumber <= 0) {
 			String[] values = { "", "" };
@@ -87,6 +92,74 @@ public class Controller {
 	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		MainScreen ms = new MainScreen();
+	}
+	
+public static boolean CompareAnswers(int moduleNo, String studentAnswer, int slideNo){
+		
+		String modelAnswer = null;		
+		switch(moduleNo){
+		case 1:
+			modelAnswer = VariableModel.getAnswer(slideNo);
+			break;
+		case 2:
+			modelAnswer = ConditionalModel.getAnswer(slideNo);
+			break;
+		case 3:
+			modelAnswer = LoopModel.getAnswer(slideNo);
+			break;
+		case 4:
+			modelAnswer = SubroutineModel.getAnswer(slideNo);
+			break;
+		}
+		
+		String answer[] = modelAnswer.split("\\n");
+		String answer2[] = studentAnswer.split("\\n");
+		String wrong = "";
+		
+		switch(answer.length){
+		case 1:
+			if(answer[0].equals(answer2[0]))
+				return true;
+			else
+				return false;
+			
+		case 2:
+			if(answer[0].equals(answer2[0]) && answer[1].equals(answer2[1]))
+				return true;
+			else 
+				return false;
+		case 3:
+			if(answer[0].equals(answer2[0]) && answer[1].equals(answer2[1]) && answer[2].equals(answer2[2]))
+				return true;
+			else
+				return false;
+		case 4:
+			if(answer[0].equals(answer2[0]) && answer[1].equals(answer2[1]) && answer[2].equals(answer2[2]) && answer[3].equals(answer2[3]))
+				return true;
+			else
+				return false;
+		default:
+			return true;
+				
+//				if(answer[0].equals(answer2[0]) && answer[1].equals(answer2[1])){
+//			return true;
+//		} else {
+////			String[] subAnswer = {};
+//			String[] subAnswer2 = {};
+//			for(int j = 0; j < 2; j++){ 
+//				for(int i=0; i < answer.length; i++){
+//					if(answer[j].charAt(i)==answer2[j].charAt(i)){
+//						//
+//					} else {
+//						wrong+=answer[j].charAt(i);
+//					}
+//				}
+//			}
+//			System.out.println(answer[0].toString());
+//			System.out.println(answer2[0].toString());
+//			return false;
+			
+		}
 	}
 	
 	
