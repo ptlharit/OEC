@@ -53,7 +53,7 @@ public class MainScreen {
         
         BufferedImage logoPicture = null;
 		try {
-			logoPicture = ImageIO.read(this.getClass().getResource("/pics/logo.png"));
+			logoPicture = ImageIO.read(new File("pics/logo.png"));
 		} catch (IOException e) { e.printStackTrace(); }
         logo = new JLabel(new ImageIcon(logoPicture));
         logo.setBounds(12, 102, 776, 360);

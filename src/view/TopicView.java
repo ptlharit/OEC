@@ -25,17 +25,17 @@ public class TopicView {
 
 		window = new JPanel(new GridLayout(5, 1));
 
-		// title = new JLabel(createImageIcon ("topics.png"));
-		// Variable_button = new JButton(createImageIcon ("variables.png"));
-		// Condition_button = new JButton(createImageIcon ("conditions.png"));
-		// Loops_button = new JButton(createImageIcon ("loops.png"));
-		// Sub_button = new JButton(createImageIcon ("subroutines.png"));
+		title = new JLabel(createImageIcon ("topics.png"));
+		Variable_button = new JButton(createImageIcon ("variables.png"));
+		Condition_button = new JButton(createImageIcon ("conditions.png"));
+		Loops_button = new JButton(createImageIcon ("loops.png"));
+		Sub_button = new JButton(createImageIcon ("subroutines.png"));
 
-		title = new JLabel("Topics");
-		Variable_button = new JButton("VARIABLES");
-		Condition_button = new JButton("CONDITIONALs");
-		Loops_button = new JButton("LOOPS");
-		Sub_button = new JButton("SUBROUTINES");
+//		title = new JLabel("Topics");
+//		Variable_button = new JButton("VARIABLES");
+//		Condition_button = new JButton("CONDITIONALs");
+//		Loops_button = new JButton("LOOPS");
+//		Sub_button = new JButton("SUBROUTINES");
 
 		Variable_button.addActionListener(e -> {
 			openStory(1);

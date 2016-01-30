@@ -153,11 +153,8 @@ public class StoryView extends JFrame {
 			TopicView tv = new TopicView();
 			return;
 		}
-		
 
-		
 		update();
-
 		
 		boolean correctAns = Controller.CompareAnswers(module, console.getText(), slideNumber);
 		
@@ -183,8 +180,9 @@ public class StoryView extends JFrame {
 			ImageIcon icon = new ImageIcon("pics/yay.png"); //credit to http://www.clipartden.com/freeclipart/education/school/awards_10057.html
 			JOptionPane.showMessageDialog(this, congratulationMSG, "You got it!", JOptionPane.INFORMATION_MESSAGE,icon);
 			//array = Controller.next(num, slidenum);
+			slideNumber++;
 			update();
-		}else {
+		} else {
 			JOptionPane.showMessageDialog(this, "Oops, try again. \nRemember to check the hint.", "Sorry, that's not it.", JOptionPane.ERROR_MESSAGE);
 		}
 	}
