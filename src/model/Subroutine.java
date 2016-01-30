@@ -66,22 +66,34 @@ public class Subroutine {
 					+	"	Nish goes to the restaurant with Mish and dish\n"
 					+ 	"	Nish goes back home" ,
 					
+				"",
+					
 				"Let's get Nish to the restaurant, buy some food and back home. \n",
+					
+				"",
+					
+				"Let's get Nish to the restaurant, but he doesn't want to come back home. \n",	
 				
-				"Let's get Nish to the restaurant, but he doesn't want to come back home. \n"				
+				""
 	};
 	
 	String[] hint = {"Type:\n"
 			+	"	Nish goes to the restaurant with Mish and dish\n"
 			+ 	"	Nish goes back home" ,
 			
+			"",
+			
 			"	Nish goes to the restaurant with Mish and dish\n"
 			+	"	Nish gets _____\n"
 			+	" 	Remember Nish has to go back home"
 			,
 			
+			"",
+			
 			"	Nish goes to the restaurant with Mish and dish\n"
-			+	"	Nish gets _____\n"
+			+	"	Nish gets _____\n",
+			
+			""
 			};
 	
 	public String getStory(int module) {
