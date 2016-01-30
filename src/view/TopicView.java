@@ -13,9 +13,7 @@ import javax.swing.*;
 public class TopicView {
 
 	private JFrame frame;
-
 	private JPanel window;
-
 	private JLabel title;
 
 	private JButton Variable_button, Condition_button, Loops_button, Sub_button;
@@ -27,19 +25,30 @@ public class TopicView {
 
 		window = new JPanel(new GridLayout(5, 1));
 
-		title = new JLabel(createImageIcon ("topics.png"));
+		// title = new JLabel(createImageIcon ("topics.png"));
+		// Variable_button = new JButton(createImageIcon ("variables.png"));
+		// Condition_button = new JButton(createImageIcon ("conditions.png"));
+		// Loops_button = new JButton(createImageIcon ("loops.png"));
+		// Sub_button = new JButton(createImageIcon ("subroutines.png"));
 
-		Variable_button = new JButton(createImageIcon ("variables.png"));
-		Variable_button.addActionListener(e -> { openStory(1); });
+		title = new JLabel("Topics");
+		Variable_button = new JButton("VARIABLES");
+		Condition_button = new JButton("CONDITIONALs");
+		Loops_button = new JButton("LOOPS");
+		Sub_button = new JButton("SUBROUTINES");
 
-		Condition_button = new JButton(createImageIcon ("conditions.png"));
-		Condition_button.addActionListener(e ->{ openStory(2); });
-
-		Loops_button = new JButton(createImageIcon ("loops.png"));
-		Loops_button.addActionListener(e -> { openStory(3);} );
-
-		Sub_button = new JButton(createImageIcon ("subroutines.png"));
-		Sub_button.addActionListener(e -> { openStory(4);} );
+		Variable_button.addActionListener(e -> {
+			openStory(1);
+		});
+		Condition_button.addActionListener(e -> {
+			openStory(2);
+		});
+		Loops_button.addActionListener(e -> {
+			openStory(3);
+		});
+		Sub_button.addActionListener(e -> {
+			openStory(4);
+		});
 
 		window.add(title);
 		window.add(Variable_button);
@@ -67,19 +76,15 @@ public class TopicView {
 			}
 		});
 	}
-	
-	protected static ImageIcon createImageIcon (String path)
-    { //createImageIcon method begins
-        java.net.URL imgURL = TopicView.class.getResource (path);
-        if (imgURL != null) //If loop if the image is found
-        { //begins if loop
-            return new ImageIcon (imgURL); //Returns the image that is found
-        } //ends if loop
-        else
-        { //Begins else loop
-            System.err.println ("Couldn't find file: " + path); //Prints an error message
-            return null; //returns nothing
-        } //Ends else loop
-    } //createImageIcon method ends
+
+	protected static ImageIcon createImageIcon(String path) {
+		java.net.URL imgURL = TopicView.class.getResource(path);
+		if (imgURL != null) {
+			return new ImageIcon(imgURL);
+		} else {
+			System.err.println("Couldn't find file: " + path);
+			return null;
+		}
+	}
 
 }

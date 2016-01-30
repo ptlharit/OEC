@@ -30,7 +30,7 @@ public class MainScreen {
         
         window = new JPanel();
         
-        title = new JLabel("Welcome to K\u00dcDO! ");
+        title = new JLabel("Welcome to K\u00dcDO!");
         title.setBounds(0, 0, 800, 106);
         Font titleFont = title.getFont();
         String titleText = title.getText();
@@ -51,12 +51,12 @@ public class MainScreen {
         title.setFont(new Font(titleFont.getName(), Font.PLAIN, fontSizeToUse));
 		title.setHorizontalAlignment(SwingConstants.CENTER);
         
-        BufferedImage logoPicture = null;
-		try {
-			logoPicture = ImageIO.read(new File("pics/logo.png"));
-		} catch (IOException e) { e.printStackTrace(); }
-        logo = new JLabel(new ImageIcon(logoPicture));
-        logo.setBounds(12, 102, 776, 360);
+//        BufferedImage logoPicture = null;
+//		try {
+//			logoPicture = ImageIO.read(new File("pics/logo.png"));
+//		} catch (IOException e) { e.printStackTrace(); }
+//        logo = new JLabel(new ImageIcon(logoPicture));
+//        logo.setBounds(12, 102, 776, 360);
 
         start = new JButton("Start");
         start.setBounds(260, 474, 275, 86);
@@ -64,7 +64,7 @@ public class MainScreen {
         window.setLayout(null);
 
         window.add(title);
-        window.add(logo);
+//        window.add(logo);
         window.add(start);
         
         frame.getContentPane().add(window);
