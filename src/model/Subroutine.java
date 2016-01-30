@@ -107,4 +107,8 @@ public class Subroutine {
 	public String getQuestion(int module) {
 		return question[module - 1];
 	}
+	
+	public String getHint(int module){
+		return hint[module - 1];
+	}
 }
