@@ -4,11 +4,13 @@ import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -41,6 +43,8 @@ public class StoryView extends JFrame {
 	private int slideNumber = 0;
 	private String slideLabelText = "Slide";
 	
+	private JTextField console;
+	
 	public StoryView(int m) {
 		module = m;
 		
@@ -50,7 +54,7 @@ public class StoryView extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		setTitle("OEC | 2016 | PROGRAMMING");
+		setTitle("K\u00dcDO - The Interactive Programming Story Book" );
 		
 		JPanel panel = new JPanel();
 		panel.setBounds(12, 12, 876, 132);
@@ -74,7 +78,7 @@ public class StoryView extends JFrame {
 		picture.setBounds(12, 12, 287, 304);
 		panel_1.add(picture);
 		
-		JTextField console = new JTextField();
+		console = new JTextField();
 		console.setBounds(327, 145, 524, 171);
 		panel_1.add(console);
 		console.setColumns(10);
@@ -116,9 +120,32 @@ public class StoryView extends JFrame {
 	}
 	
 	private void next() {
-		check = Controller.check();
-		array = Controller.next(num, slidenum);
-		update();
+		boolean correctAns = Controller.checkAns(console.getText(), module, slideNumber);
+		Random rand = new Random();
+		int randInt = rand.nextInt(9);
+		String congratulationMSG = "";
+		
+		//random messages to mix it up
+		switch (randInt){
+			case 1: congratulationMSG = "Good Job!"; break;
+			case 2: congratulationMSG = "Nice Work!"; break;
+			case 3: congratulationMSG = "Awesome!"; break;
+			case 4: congratulationMSG = "You're doing great!"; break;
+			case 5: congratulationMSG = "Wow, amazing!"; break;
+			case 6: congratulationMSG = "Keep up the good work!"; break;
+			case 7: congratulationMSG = "Somebody deserves a sticker!"; break;
+			case 8: congratulationMSG = "You're a star!"; break;
+			case 9: congratulationMSG = "Terrific!"; break;
+		}
+		
+		if (correctAns){
+			ImageIcon icon = new ImageIcon("pics/yay.png"); //credit to http://www.clipartden.com/freeclipart/education/school/awards_10057.html
+			JOptionPane.showMessageDialog(this, congratulationMSG, "You got it!", JOptionPane.INFORMATION_MESSAGE,icon);
+			//array = Controller.next(num, slidenum);
+			update();
+		}else {
+			JOptionPane.showMessageDialog(this, "Oops, try again. \nRemember to check the hint.", "Sorry, that's not it.", JOptionPane.ERROR_MESSAGE);
+		}
 	}
 	
 	private void update() {
