@@ -6,18 +6,18 @@ public class Loop
 	String [] question = {"How old is Nish?\nHint - try typing: Nish is 20","How old is Nish now?","What kind of shirt is Nish wearing?\nHint - try typing: Shirt is Blue","What is the colour of his shirt?","Is Nish sleeping?\nHint - try typing: Sleep is Yes","Is Nish sleeping?","How Old is Nish?","Whats the colour of the shirt?","Is Nish sleeping?"};
 	String [] answer = {"Nish is 20","Nish is 21","Shirt is Blue","Shirt is Red","Sleep is Yes","Sleep is No","Nish is 23","Shirt is Yellow","Sleep is No"};
 
-	public String getLearn(int module) 
+	public String getStory(int module) 
 	{
 		return story[module - 1];
 	}
-
+	
+	public String getQuestion(int module) 
+	{
+		return question[module - 1];
+	}
+	
 	public String getAnswer(int module) 
 	{
 		return answer[module - 1];
-	}
-
-	public String getHint(int module) 
-	{
-		return question[module - 1];
 	}
 }
