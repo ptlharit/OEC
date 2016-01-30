@@ -51,12 +51,12 @@ public class MainScreen {
         title.setFont(new Font(titleFont.getName(), Font.PLAIN, fontSizeToUse));
 		title.setHorizontalAlignment(SwingConstants.CENTER);
         
-        BufferedImage logoPicture = null;
-		try {
-			logoPicture = ImageIO.read(this.getClass().getResource("/pics/logo.png"));
-		} catch (IOException e) { e.printStackTrace(); }
-        logo = new JLabel(new ImageIcon(logoPicture));
-        logo.setBounds(12, 102, 776, 360);
+//        BufferedImage logoPicture = null;
+//		try {
+//			logoPicture = ImageIO.read(new File("pics/logo.png"));
+//		} catch (IOException e) { e.printStackTrace(); }
+//        logo = new JLabel(new ImageIcon(logoPicture));
+//        logo.setBounds(12, 102, 776, 360);
 
         start = new JButton("Start");
         start.setBounds(260, 474, 275, 86);
@@ -64,7 +64,7 @@ public class MainScreen {
         window.setLayout(null);
 
         window.add(title);
-        window.add(logo);
+//        window.add(logo);
         window.add(start);
         
         frame.getContentPane().add(window);
