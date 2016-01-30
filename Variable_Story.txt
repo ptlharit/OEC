@@ -1,0 +1,46 @@
+Hi, my name is Nish and I am 20 years old.
+-
+
+How old is Nish? Hint - try typing: Nish is 20
+Nish is 20
+
+(Pop Up) Hooooray! You just created Nish with a VARIABLE. Variable help us make things. Like, Nish is 20 years old
+
+Nish just had a birthday. Now, he is 21 years old. How old is Nish now?
+Nish is 21
+
+(Pop Up) Way to go!!!
+
+Nish is wearing a Blue colour shirt.
+-
+
+What kind of shirt is Nish wearing? Hint - try typing: Shirt is Blue
+Shirt is Blue
+
+(Pop Up) You Got It! You just created a variable Shirt that is Blue
+
+Nish is wearing a Red shirt? What is the colour of his shirt?
+Shirt is Red
+
+(Pop Up) Perfect!
+
+Nish is sleeping.
+-
+
+Is Nish sleeping? Hint - try typing: Sleep is Yes
+Sleep is Yes
+
+(Pop Up) Cheers! You just created a variable Sleep that is Yes
+
+Nish is playing Hockey. Is Nish sleeping?
+Sleep is No
+
+(Pop Up) Good Job!
+
+Nish is 23 years old. He is wearing a Yellow shirt and he is not sleeping.
+How Old is Nish?
+Nish is 23
+Whats the colour of the shirt?
+Shirt is Yellow
+Is Nish sleeping?
+Sleep is No
