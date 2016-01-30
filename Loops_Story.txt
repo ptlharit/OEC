@@ -1,0 +1,12 @@
+Nish is Eating when he is hungry.
+-
+
+Can you make Nish Eat? Hint - try typing While Nish is Hungry, Nish is Eating
+Nish is Hungry, Nish is Eating
+
+(Pop Up) Hooooray! You just created a While loop that makes Nish eat everytime he is hungry.
+
+Nish is outside and he is walking. Can you make Nish Walk?
+While Nish is Outside, Nish is Walking
+
+(Pop Up) Congratulations! You have successfully learned LOOPS
